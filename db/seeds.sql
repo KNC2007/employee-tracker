@@ -1,4 +1,4 @@
-INSERT INTO departments (name)
+INSERT INTO department (name)
 VALUES 
 ('English/Language Arts'),
 ('Mathematics'),
@@ -11,7 +11,7 @@ VALUES
 ('Foreign Languages'),
 ('Guidance');
 
-INSERT INTO roles (title, salary, department_id)
+INSERT INTO role (title, salary, department_id)
 VALUES 
 ('General Education Teacher', 70000, 1),
 ('Principal', 100000, 2),
@@ -26,13 +26,13 @@ VALUES
 
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
 VALUES
-('Harry', 'Potter', 1, 1),
+('Harry', 'Potter', 1, 2),
 ('Albus', 'Dumbledore', 2, 2),
-('Minerva', 'McGonagall', 3, 3),
-('Argus', 'Filch', 4, 4),
-('Moaning', 'Myrtle', 5, 5),
-('Draco', 'Malfoy', 6, 6),
-('Hermione', 'Granger', 7, 7),
-('Sybill', 'Trelawney', 8, 8),
-('Lord', 'Voldemort', 9, 9),
-('Rubeus', 'Hagrid', 10, 10);
+('Minerva', 'McGonagall', 3, 2),
+('Argus', 'Filch', 4, 3),
+('Moaning', 'Myrtle', 5, 3),
+('Draco', 'Malfoy', 6, 3),
+('Hermione', 'Granger', 7, 2),
+('Sybill', 'Trelawney', 8, 2),
+('Lord', 'Voldemort', 9, 2),
+('Rubeus', 'Hagrid', 10, 3);
