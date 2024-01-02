@@ -1,38 +1,38 @@
-INSERT INTO department (name)
+INSERT INTO department (id, name)
 VALUES 
-('English/Language Arts'),
-('Mathematics'),
-('School Operations'),
-('Administration'),
-('Career and Technical Education'),
-('Unified Arts'),
-('Social Studies'),
-('Science'),
-('Foreign Languages'),
-('Guidance');
+(1, 'English/Language Arts'),
+(2, 'Mathematics'),
+(3, 'School Operations'),
+(4, 'Administration'),
+(5, 'Career and Technical Education'),
+(6, 'Unified Arts'),
+(7, 'Social Studies'),
+(8, 'Science'),
+(9, 'Foreign Languages'),
+(10, 'Guidance');
 
-INSERT INTO role (title, salary, department_id)
+INSERT INTO role (id, title, salary, department_id)
 VALUES 
-('General Education Teacher', 70000, 1),
-('Principal', 100000, 2),
-('Assistant Principal', 90000, 3),
-('Custodian', 60000, 4),
-('Secretary', 60000, 5),
-('Cafeteria Worker', 60000, 6),
-('Counselor', 70000, 7),
-('Special Education Teacher', 70000, 8),
-('ELL Teacher', 70000, 9),
-('Bus Driver', 60000, 10);
+(1, 'General Education Teacher', 70000, 1),
+(2, 'Principal', 100000, 4),
+(3, 'Assistant Principal', 90000, 4),
+(4, 'Custodian', 60000, 3),
+(5, 'Secretary', 60000, 3),
+(6, 'Cafeteria Worker', 60000, 3),
+(7, 'Counselor', 70000, 10),
+(8, 'Special Education Teacher', 70000, 2),
+(9, 'ELL Teacher', 70000, 9),
+(10, 'Bus Driver', 60000, 3);
 
-INSERT INTO employee (first_name, last_name, role_id, manager_id)
+INSERT INTO employee (id, first_name, last_name, role_id, manager_id)
 VALUES
-('Harry', 'Potter', 1, 2),
-('Albus', 'Dumbledore', 2, 2),
-('Minerva', 'McGonagall', 3, 2),
-('Argus', 'Filch', 4, 3),
-('Moaning', 'Myrtle', 5, 3),
-('Draco', 'Malfoy', 6, 3),
-('Hermione', 'Granger', 7, 2),
-('Sybill', 'Trelawney', 8, 2),
-('Lord', 'Voldemort', 9, 2),
-('Rubeus', 'Hagrid', 10, 3);
+(1, 'Harry', 'Potter', 1, 2),
+(2, 'Albus', 'Dumbledore', 2, 2),
+(3, 'Minerva', 'McGonagall', 3, 2),
+(4, 'Argus', 'Filch', 4, 3),
+(5, 'Moaning', 'Myrtle', 5, 3),
+(6, 'Draco', 'Malfoy', 6, 3),
+(7, 'Hermione', 'Granger', 7, 2),
+(8, 'Sybill', 'Trelawney', 8, 2),
+(9, 'Lord', 'Voldemort', 9, 2),
+(10, 'Rubeus', 'Hagrid', 10, 3);
