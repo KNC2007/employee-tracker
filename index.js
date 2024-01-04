@@ -239,7 +239,7 @@ async function addRole() {
       }
     ]);
 
-    await db.query('INSERT INTO role (title, salary, department_id) VALUES (?, ?, ?)', newRoleData.title, newRoleData.salary, newRoleData.department_id);
+    await db.query('INSERT INTO role (title, salary, department_id) VALUES (?, ?, ?)', [newRoleData.title, newRoleData.salary, newRoleData.department_id]);
     console.log('Role added to the database.');
   } catch (error) {
     console.error(error);
@@ -356,15 +356,15 @@ async function deleteDepartment() {
     name: name,
     value: id,
   }));
-  const departmentId = await inquirer.prompt({
+  const { departmentId } = await inquirer.prompt({
     type: 'list',
     name: 'departmentId',
     message: 'Select the department to delete:',
     choices: departmentChoices,
   });
-  await db.query('DELETE FROM department WHERE id = ?', departmentId);
+  await db.query('DELETE FROM department WHERE id = ?', [departmentId]);
   console.log('Department deleted.');
-  Quit();
+  init();
 }
 
 // delete a role
@@ -375,15 +375,15 @@ async function deleteRole() {
     value: id,
   }));
 
-  const roleId = await inquirer.prompt({
+  const { roleId } = await inquirer.prompt({
     type: 'list',
     name: 'roleId',
     message: 'Select the role to delete:',
     choices: roleChoices,
   });
-  await db.query('DELETE FROM role WHERE id = ?', roleId);
+  await db.query('DELETE FROM role WHERE id = ?', [roleId]);
   console.log('Role deleted.');
-  Quit();
+  init();
 }
 
 // Function to delete an employee
@@ -394,16 +394,16 @@ async function deleteEmployee() {
     value: id,
   }));
 
-  const employeeId = await inquirer.prompt({
+  const { employeeId } = await inquirer.prompt({
     type: 'list',
     name: 'employeeId',
     message: 'Select the employee to delete:',
     choices: employeeChoices,
   });
 
-  await db.query('DELETE FROM employee WHERE id = ?', employeeId);
+  await db.query('DELETE FROM employee WHERE id = ?', [employeeId]);
   console.log('Employee deleted.');
-  Quit();
+  init();
 }
 
 function Quit() {
